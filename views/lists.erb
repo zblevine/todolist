@@ -1,8 +1,8 @@
 <ul id="lists">
-  <% sort_lists(@lists) do |list, idx| %>
+  <% sort_lists(@lists) do |list| %>
     <li class="<%= list_class(list) %>">
       <a>
-        <h2><a href="/lists/<%= idx %>"><%= list[:name] %></a></h2>
+        <h2><a href="/lists/<%= list[:id] %>"><%= list[:name] %></a></h2>
         <p><%= num_complete(list) %> / <%= list[:todos].size %></p>
       </a>
     </li>
